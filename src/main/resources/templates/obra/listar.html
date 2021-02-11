@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="admin" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Obras</title>
+</head>
+
+<body>
+    <div layout:fragment="content">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Estado</th>
+                    <th>Categoria</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="obra : ${obras}">
+                    <td th:text="${obra.nombre}"></td>
+                    <td th:text="${obra.estado==true ? 'Activo' : 'Inactivo'}"></td>
+                    <td th:text="${obra.categoria.nombre}">
+
+                    </td>
+                    <td>
+                        <a href="" class="btn btn-primary btn-sm">Ver</a>
+                        <a href="" class="btn btn-primary btn-sm">Editar</a>
+                        <a href="" class="btn btn-primary btn-sm">Activar</a>
+                        <a href="" class="btn btn-primary btn-sm">Desactivar</a>
+                        <a href="" class="btn btn-primary btn-sm">Add Atributos</a>
+                        <a href="" class="btn btn-primary btn-sm">Add imagenes</a>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+    </div>
+</body>
+
+</html>

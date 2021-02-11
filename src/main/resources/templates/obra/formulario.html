@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="admin" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Obras</title>
+</head>
+
+<body>
+    <div layout:fragment="content">
+        <div class="container-fluid">
+            <!-- SELECT2 EXAMPLE -->
+            <div class="card card-default">
+                <div class="card-header">
+                    <h3 class="card-title">Formulario de Productos</h3>
+
+
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Nombre</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Precio</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Descripción</label>
+                                <textarea class="form-control">
+
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Imagen</label>
+                                <input type="file" class="form-control">
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Categoria</label>
+                                <select class="form-control">
+                                    <option>Algo</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+                        <!-- /.form-group -->
+
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Agregar</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.row -->
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
