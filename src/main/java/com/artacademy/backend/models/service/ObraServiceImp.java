@@ -15,20 +15,20 @@ public class ObraServiceImp implements ObraService {
     @Autowired
     private ObraDao obradao;
     @Transactional(readOnly = true)
-    @Override
+    
     public List<Obra> listarObras() {
    
         return obradao.findAll();
     }
 
-    @Override
+
     @Transactional(readOnly = true)
     public Obra buscarObra(Long id) {
        
         return obradao.findById(id).orElse(null);
     }
 
-    @Override
+    
     public void guardarObra(Obra obra) {
        obradao.save(obra);
 

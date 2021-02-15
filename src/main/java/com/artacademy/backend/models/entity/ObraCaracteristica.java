@@ -15,7 +15,7 @@ public class ObraCaracteristica {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false)
-    private String tamaño;
+    private String size;
     @Column(nullable = false)
     private double precio;
     @Column(nullable = false)
@@ -32,12 +32,12 @@ public class ObraCaracteristica {
         this.id = id;
     }
 
-    public String getTamañO() {
-        return this.tamaño;
+    public String getSize() {
+        return this.size;
     }
 
-    public void setTamañO(String tamaño) {
-        this.tamaño = tamaño;
+    public void setSize(String size) {
+        this.size = size;
     }
 
     public double getPrecio() {

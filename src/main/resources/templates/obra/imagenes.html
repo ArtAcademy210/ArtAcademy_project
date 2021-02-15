@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="admin" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div layout:fragment="content">
+        <div class="container-fluid">
+            <div class="card card-default">
+                <div class="card-header">
+                    <h3 class="card-title">Formulario de Atributos</h3><br>
+                    <p>Nombre del producto <span th:text="${obraimagen.obra.nombre}"></span></p>
+
+
+                </div>
+                <!-- /.card-header -->
+
+                <div class="card-body">
+                    <form enctype="multipart/form-data" th:action="@{/obra/imagenes}" th:object="${obraimagen}" method="POST">
+                        <input type="hidden" th:field="*{obra}" th:value="${obraimagen.obra.id}">
+                        <input type="file" name="file" class="form-contol"><br><br>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                    <th>Id</th>
+                    <th>Imagen</th>
+                    <th>Acciones</th>
+                </thead>
+                <tbody>
+                    <tr th:each="obraimg : ${obrasimagenes}">
+                        <td th:text=${obraimg.id}></td>
+                        <td>
+                            <img th:if="${#strings.length(obraimg.urlimagen) > 0}" width="100" th:src="@{'/uploads/' + ${obraimg.urlimagen}}"></td>
+                        <td>
+                            <a th:href="@{/eliminar/galeria/} + ${obraimg.id}" class="btn btn-danger btn-sm">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+</html>

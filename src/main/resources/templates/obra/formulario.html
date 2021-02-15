@@ -20,58 +20,61 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Nombre</label>
-                                <input type="text" class="form-control">
+                    <form enctype="multipart/form-data" th:object="${obra}" method="post" th:action="@{/obra/guardar}">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Nombre</label>
+                                    <input type="text" class="form-control" th:field="*{nombre}">
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Precio</label>
+                                    <input type="text" class="form-control" th:field="*{precio}">
+                                </div>
+
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Descripción</label>
+                                    <textarea class="form-control" th:field="*{descripcion}">
+
+                                </textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Imagen</label>
+                                    <input type="file" name="file" class="form-control">
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Categoria</label>
+                                    <select class="form-control">
+                                    <option>Algo</option>
+                                </select>
+                                </div>
+
                             </div>
 
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Precio</label>
-                                <input type="text" class="form-control">
-                            </div>
 
+                            <!-- /.form-group -->
+
+                            <!-- /.form-group -->
                         </div>
                         <!-- /.col -->
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Descripción</label>
-                                <textarea class="form-control">
-
-                                </textarea>
+                                <button type="submit" class="btn btn-primary">Agregar</button>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Imagen</label>
-                                <input type="file" class="form-control">
-                            </div>
-
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Categoria</label>
-                                <select class="form-control">
-                                    <option>Algo</option>
-                                </select>
-                            </div>
-
-                        </div>
-
-
-                        <!-- /.form-group -->
-
-                        <!-- /.form-group -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Agregar</button>
-                        </div>
-                    </div>
+                    </form>
 
                 </div>
                 <!-- /.row -->
