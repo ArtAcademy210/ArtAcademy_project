@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="admin" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Categoria</title>
+</head>
+
+<body>
+    <div layout:fragment="content">
+        <div class="d-sm-flex justify-content-between">
+
+            <div class="mb-2 mb-sm-0 pt-1">
+                <a href="" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i></a>
+            </div>
+
+            <form class="d-flex justify-content-center">
+                <!-- Default input -->
+
+                <input type="search" name="dato" class="form-control">
+                <button class="btn btn-primary btn-sm" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="Categoria :${Lista}"><td th:text="${Categoria.id}"></td>
+                    <td th:text="${Categoria.nombre}"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+
+</html>
